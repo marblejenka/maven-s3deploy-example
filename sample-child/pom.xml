@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>marblejenka</groupId>
+	<artifactId>sample-child</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<parent>
+		<groupId>marblejenka</groupId>
+		<artifactId>sample-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../sample-parent</relativePath>
+	</parent>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.springframework.build.aws</groupId>
+				<artifactId>org.springframework.build.aws.maven</artifactId>
+				<version>3.0.0.RELEASE</version>
+			</extension>
+		</extensions>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>marble-repository</id>
+			<name>sample s3 repository</name>
+			<url>s3://marble-repository/release/</url>
+		</repository>
+	</distributionManagement>
+</project>
