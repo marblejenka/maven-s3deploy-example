@@ -1,0 +1,8 @@
+sample-parent
+ the parent project deploy into s3.
+
+sample-child
+ the child project deploy into s3. this project includes same implementaiton.
+
+sample-client
+ this project depends on sample-child. and, this project resolve dependency from s3 repository.
